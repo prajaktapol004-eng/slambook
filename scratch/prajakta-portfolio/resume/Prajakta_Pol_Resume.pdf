@@ -1,0 +1,150 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 3653 >>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(PRAJAKTA POL) Tj
+/F1 9 Tf
+0 -16 Td
+(Aspiring PLC & Industrial Automation Engineer | Pune / Solapur, Maharashtra) Tj
+0 -13 Td
+(Email: polprajakta07@gmail.com | Open to Entry-Level Roles \(Pune, India\)) Tj
+0 -10 Td
+(--------------------------------------------------------------------------------) Tj
+0 -16 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(CAREER OBJECTIVE) Tj
+/F1 9 Tf
+0 -14 Td
+(Electronics and Telecommunication Engineering graduate with a foundation in PLC) Tj
+0 -12 Td
+(automation, industrial sensors, control systems, and embedded electronics. Passionate) Tj
+0 -12 Td
+(about solving real-world engineering problems and building reliable automation solutions.) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(EDUCATION) Tj
+/F1 9 Tf
+0 -14 Td
+(* Bachelor of Technology \(B.Tech\) - Electronics & Telecommunication Engineering) Tj
+0 -12 Td
+(  N. B. Navale Sinhgad College of Engineering, Kegaon, Solapur | Year: 2026 | CGPA: 8.25 / 10) Tj
+0 -12 Td
+(* Post Graduate Diploma in Industrial Automation \(PGDIA\)) Tj
+0 -12 Td
+(  Status: Completed | Siemens PLC, Allen-Bradley PLC, Industrial Sensors, Automation Fundamentals) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(TECHNICAL SKILLS) Tj
+/F1 9 Tf
+0 -14 Td
+(* PLC & Automation: PLC Fundamentals, Ladder Logic, Siemens PLC, Allen-Bradley PLC,) Tj
+0 -12 Td
+(  Industrial Sensors, HMI/SCADA Fundamentals, PROFINET & Industrial Communication,) Tj
+0 -12 Td
+(  Control System Troubleshooting) Tj
+0 -12 Td
+(* Electronics & Instrumentation: Analog & Digital Electronics, Sensors & Signal Interfacing,) Tj
+0 -12 Td
+(  Relays, Contactors, SMPS, MCB, Overload Relays, Hardware Testing & Troubleshooting) Tj
+0 -12 Td
+(* Embedded Systems & IoT: ESP32, Sensor Integration, Wi-Fi IoT, ThingSpeak, Telegram Bot) Tj
+0 -12 Td
+(* Tools & Programming: PLC Simulation Software, Basic C Programming, Documentation & Testing) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(INTERNSHIP & PRACTICAL EXPOSURE) Tj
+/F1 9 Tf
+0 -14 Td
+(* DRDO Internship \(2026\) - Project Exposure & Instrumentation Learning) Tj
+0 -12 Td
+(  Exposure to Gamma Ray Spectrometer, dosimeter, RF & radiation-hardened connectors,) Tj
+0 -12 Td
+(  and Cobalt-60 gamma radiation source chamber.) Tj
+0 -12 Td
+(* Laxmi Controls, Solapur \(2025\) - Panel & Automation Internship) Tj
+0 -12 Td
+(  Exposure to industrial electrical control panels, DIN rail hardware, relays & contactors.) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(KEY ENGINEERING PROJECTS) Tj
+/F1 9 Tf
+0 -14 Td
+(* Water Quality Monitoring System \(ESP32, TDS, pH, Turbidity, Temp, PCB, ThingSpeak\)) Tj
+0 -12 Td
+(  Multi-parameter real-time sensor acquisition with IoT cloud telemetry.) Tj
+0 -12 Td
+(* Smart Energy Meter \(ESP32, ZMPT101B Voltage Transformer, Wi-Fi, Telegram Bot\)) Tj
+0 -12 Td
+(  True RMS AC mains voltage monitoring and automated notification alerts.) Tj
+0 -12 Td
+(* Smart Encrypted Walkie-Talkie \(ESP32, ESP-NOW, AES-128, I2S Digital Mic\)) Tj
+0 -12 Td
+(  Low-latency encrypted peer-to-peer digital voice communication.) Tj
+0 -12 Td
+(* Silk Fibroin Membrane Water Filter) Tj
+0 -12 Td
+(  Research-oriented nanofiber biomaterial membrane synthesis for water filtration.) Tj
+0 -12 Td
+(* PLC Industrial Automation Practice) Tj
+0 -12 Td
+(  IEC 61131-3 Ladder Logic: DOL Motor starter with latch, timer \(TON\), sensor part counter.) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+/F2 11 Tf
+(HONORS & AWARDS) Tj
+/F1 9 Tf
+0 -14 Td
+(* Best Oral Presentation - 2nd Int'l Conf. on Silk Fibroin & Sericulture Resources) Tj
+0 -12 Td
+(* Best Research Paper - NCRTC 2025) Tj
+0 -12 Td
+(* First Rank - Ideathon Spirit 2K25, SVERI) Tj
+0 -12 Td
+(* Participant - Prometeo'25, IIT Jodhpur | T&P Student Volunteer) Tj
+0 -12 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000003955 00000 n 
+0000004025 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4100
+%%EOF

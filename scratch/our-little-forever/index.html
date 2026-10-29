@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Forever ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f4b5c9;
+  --rose: #c65c82;
+  --light: #fff0f5;
+  --cream: #fffaf5;
+  --lavender: #f0eaff;
+  --ink: #654354;
+  --muted: #987d8c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+}
+.logo {
+  font: 700 32px 'Caveat', cursive;
+  color: var(--rose);
+}
+.small-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 25px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 35px;
+}
+.pill {
+  display: inline-block;
+  background: white;
+  border: 1px solid #f4d3df;
+  border-radius: 40px;
+  padding: 10px 15px;
+  color: var(--rose);
+  font-size: 12px;
+}
+h1 {
+  font: 600 clamp(44px, 6vw, 76px)/1.08 'Playfair Display', serif;
+  margin: 22px 0;
+  letter-spacing: -2px;
+}
+h1 em {
+  color: var(--rose);
+  font: 700 1.2em 'Caveat', cursive;
+}
+.hero p {
+  line-height: 1.9;
+  color: var(--muted);
+}
+.btn {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 21px;
+  font-weight: 700;
+  margin: 8px 5px 0 0;
+  transition: .25s;
+}
+.btn:hover { transform: translateY(-3px); }
+.primary { background: var(--rose); color: white; }
+.secondary { background: white; color: var(--rose); border: 1px solid #f0d4df; }
+
+.hero-art {
+  position: relative;
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+}
+.sun {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 48%;
+  background: linear-gradient(135deg,#ffe0ea,#eee5ff);
+  transform: rotate(-9deg);
+}
+.polaroid {
+  z-index: 1;
+  width: 225px;
+  height: 275px;
+  background: white;
+  padding: 12px 12px 43px;
+  box-shadow: 0 15px 40px #a9587820;
+  transform: rotate(5deg);
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  background: #fff0f5;
+  border: 1px dashed #e7a7be;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: #b77994;
+  overflow: hidden;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo .emoji { font-size: 40px; }
+.photo strong {
+  font: 700 23px 'Caveat', cursive;
+  margin-top: 8px;
+}
+.float {
+  position: absolute;
+  font-size: 30px;
+  animation: float 3s infinite ease-in-out;
+}
+.f1 { top: 25px; right: 10%; }
+.f2 { bottom: 25px; left: 7%; animation-delay: 1s; }
+.f3 { bottom: 40px; right: 7%; animation-delay: 1.5s; }
+@keyframes float {
+  50% { transform: translateY(-13px) rotate(10deg); }
+}
+
+section { padding: 65px 22px; }
+.section-inner { max-width: 1000px; margin: auto; }
+.section-head { text-align: center; margin-bottom: 32px; }
+.script {
+  font: 600 27px 'Caveat', cursive;
+  color: var(--rose);
+}
+h2 {
+  font: 600 clamp(30px,4vw,43px) 'Playfair Display', serif;
+  margin: 10px 0;
+}
+.section-head p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+.login-section {
+  background: #fff0f5;
+  border-top: 1px solid #f6dce6;
+  border-bottom: 1px solid #f6dce6;
+}
+.login-card {
+  max-width: 620px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: white;
+  border: 1px solid #f1dce5;
+  text-align: center;
+  box-shadow: 0 15px 45px #a9587810;
+}
+.lock { font-size: 35px; }
+.name-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.name-row input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #e9d2dc;
+  border-radius: 15px;
+  padding: 14px;
+  outline: none;
+}
+.name-row input:focus { border-color: var(--rose); }
+.error { color: #bd4268; min-height: 22px; font-size: 13px; }
+
+.profile {
+  display: none;
+  max-width: 760px;
+  margin: 28px auto 0;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #efd9e2;
+  box-shadow: 0 20px 55px #a9587817;
+  animation: appear .5s ease;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.profile-head {
+  padding: 25px;
+  background: linear-gradient(120deg,#fff0f5,#f0eaff);
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.avatar {
+  height: 125px;
+  width: 125px;
+  background: white;
+  padding: 7px;
+  border-radius: 20px;
+}
+.avatar .photo { border-radius: 14px; }
+.nickname {
+  font: 600 24px 'Caveat', cursive;
+  color: var(--rose);
+}
+.profile h3 {
+  font: 600 30px 'Playfair Display', serif;
+  margin: 5px 0;
+}
+.profile-head p, .profile-body p {
+  line-height: 1.9;
+  color: var(--muted);
+}
+.profile-body { padding: 25px; }
+.shayari {
+  background: linear-gradient(140deg,#fff0f5,#f5efff);
+  border: 1px solid #f2d8e4;
+  border-radius: 20px;
+  padding: 23px 16px;
+  text-align: center;
+  margin: 20px 0;
+  animation: appear .9s ease;
+}
+.shayari h4 {
+  font: 600 25px 'Caveat', cursive;
+  color: var(--rose);
+  margin: 0 0 12px;
+}
+.shayari p {
+  font: 600 21px/1.8 'Caveat', cursive !important;
+  color: #85536c !important;
+  white-space: pre-line;
+}
+.subhead {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-top: 25px;
+}
+.memory {
+  background: #fff8fa;
+  padding: 17px;
+  border-radius: 17px;
+  border: 1px dashed #eab9cc;
+}
+.memory strong { display: block; margin-bottom: 7px; }
+.profile-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.signature {
+  font: 600 25px 'Caveat', cursive;
+  color: var(--rose);
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+.friend-card {
+  background: white;
+  border: 1px solid #f0dbe4;
+  border-radius: 22px;
+  padding: 15px;
+  transition: .25s;
+}
+.friend-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #a9587817;
+}
+.friend-card .photo { height: 150px; border-radius: 14px; }
+.friend-card h3 {
+  font: 600 21px 'Playfair Display', serif;
+  margin-bottom: 6px;
+}
+.friend-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  min-height: 43px;
+}
+.friend-card button {
+  border: 1px solid #f1d5e0;
+  background: #fff0f5;
+  color: var(--rose);
+  border-radius: 25px;
+  padding: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.timeline {
+  max-width: 720px;
+  margin: auto;
+}
+.timeline-item {
+  border-left: 2px solid #efc5d5;
+  padding: 0 0 28px 28px;
+  position: relative;
+}
+.timeline-item:before {
+  content: '♡';
+  position: absolute;
+  left: -14px;
+  top: 0;
+  background: #ffe7ef;
+  color: var(--rose);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.timeline-item strong {
+  font: 600 21px 'Playfair Display', serif;
+}
+.timeline-item p { line-height: 1.8; color: var(--muted); }
+.final-note {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+  background: white;
+  border: 1px dashed #e7b3c6;
+  border-radius: 22px;
+  padding: 25px;
+}
+.final-note p {
+  font: 600 27px 'Caveat', cursive;
+  color: var(--rose);
+}
+footer {
+  background: #fff0f5;
+  text-align: center;
+  padding: 35px 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+footer .logo { font-size: 30px; }
+
+@media(max-width:750px) {
+  .hero { grid-template-columns: 1fr; text-align: center; padding-top: 30px; }
+  .hero-art { min-height: 320px; }
+  .friends-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:480px) {
+  header { padding: 16px; }
+  .small-label { font-size: 8px; letter-spacing: 1px; }
+  .friends-grid { grid-template-columns: 1fr; }
+  .name-row { flex-direction: column; }
+  .name-row button { width: 100%; }
+  .profile-head { grid-template-columns: 85px 1fr; padding: 17px; gap: 13px; }
+  .avatar { width: 85px; height: 85px; }
+  .profile h3 { font-size: 23px; }
+  .profile-body { padding: 18px; }
+  .shayari p { font-size: 19px !important; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">our little forever ✿</div>
+  <div class="small-label">a scrapbook of us · 2022 onwards</div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="pill">♡ TO MY FAVOURITE PEOPLE ♡</span>
+    <h1>Different stories.<br><em>One little family.</em></h1>
+    <p>
+      From college corridors and tiny celebrations to graduation,
+      growing up and chasing our dreams — these are the people
+      who made my journey beautiful.
+    </p>
+    <button class="btn primary" onclick="goTo('friend-login')">Find your little page ♡</button>
+    <button class="btn secondary" onclick="goTo('our-story')">Our story ✿</button>
+  </div>
+  <div class="hero-art">
+    <div class="sun"></div>
+    <div class="float f1">♡</div>
+    <div class="float f2">✿</div>
+    <div class="float f3">✨</div>
+    <div class="polaroid">
+      <div class="photo">
+        <div class="emoji">📸💗</div>
+        <strong>Our favourite memory</strong>
+        <span>Add your group photo in the code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="login-section" id="friend-login">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="script">psst… this page is for you 💌</div>
+      <h2>Find your friendship letter</h2>
+      <p>Type the name or nickname I call you to open your own page.</p>
+    </div>
+    <div class="login-card">
+      <div class="lock">💌</div>
+      <h3>Who's opening the scrapbook?</h3>
+      <p style="color:var(--muted)">I've made a little corner of my world just for you.</p>
+      <form class="name-row" id="nameForm">
+        <input id="friendName" placeholder="Your name or nickname…" autocomplete="off">
+        <button class="btn primary" type="submit">Open my page ♡</button>
+      </form>
+      <div class="error" id="error"></div>
+      <small style="color:var(--muted)">Try Rasgulla, Shrav, Gorilla, Sanjana, Jadya, Vai or Shiv.</small>
+    </div>
+    <article class="profile" id="profile"></article>
+  </div>
+</section>
+
+<section id="our-story">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="script">the people behind my favourite chapters</div>
+      <h2>My people, my little universe</h2>
+      <p>Every person has a different story and a special place in my heart.</p>
+    </div>
+    <div class="friends-grid" id="friendsGrid"></div>
+  </div>
+</section>
+
+<section style="background:#fff6fa">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="script">from then to now</div>
+      <h2>Our growing-up story</h2>
+      <p>From childhood memories to our new adventures.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <strong>Childhood days 🌷</strong>
+        <p>School memories, silly laughter and the people who knew me before the world became so big.</p>
+      </div>
+      <div class="timeline-item">
+        <strong>2022 · The college chapter 🎓</strong>
+        <p>New classrooms, new dreams, unexpected friendships and memories that became part of my story.</p>
+      </div>
+      <div class="timeline-item">
+        <strong>Growing up together 🦋</strong>
+        <p>Different branches, new responsibilities and difficult days — but the right people still make life feel lighter.</p>
+      </div>
+      <div class="timeline-item">
+        <strong>Graduation & beyond ✨</strong>
+        <p>We are growing into new versions of ourselves, building our futures and carrying these memories into adulthood.</p>
+      </div>
+    </div>
+    <div class="final-note">
+      <p>"Zindagi ke har mod par kahaani nayi hogi,<br>par meri yaadon mein tumhari jagah wahi hogi."</p>
+      <span>With love, Prajakta ♡</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">made with love & a little bit of chaos ♡</div>
+  For the people who turned ordinary days into favourite memories.<br>
+  Always a little family. Always a part of my story. ✿
+</footer>
+
+<script>
+/*
+HOW TO ADD PHOTOS:
+1. Create a folder called "photos" beside this HTML file.
+2. Put each photo in that folder.
+3. Replace photo: "" with a path like photo: "photos/pranali.jpg".
+4. The same photo will appear in that friend's card and personal page.
+
+This name-entry feature is a fun reveal, NOT a secure password system.
+Profile information is included in the website's source code.
+*/
+
+const friends = [
+{
+ id:"pranali", name:"Pranali", nick:"Rasgulla 🍡",
+ aliases:["pranali","rasgulla"], emoji:"🍡", photo:"",
+ tagline:"My first friend, my sister, my forever person.",
+ story:"You are my first friend and so much more than that. You have seen my childhood, my entire school journey and my college days. You have known so many versions of me, and that makes our bond irreplaceable. You will always be my little sister, and I will always be your big sister.",
+ memory:"From childhood memories to growing up together, you have a place in my life nobody else can take.",
+ bond:"My little sister forever. The kind of friendship that feels like home.",
+ shayari:"Bachpan se lekar aaj tak, har kahaani mein tu hai,\nMeri chhoti si duniya ki sabse pyaari nishaani tu hai.\nDost kehna bhi kam hai, tu toh meri behen hai,\nMere har kal aur aaj mein, tera apna sa ghar hai.",
+ signoff:"Your badi sister, always ♡"
+},
+{
+ id:"shravani", name:"Shravani", nick:"Shrav 💗",
+ aliases:["shravani","shrav","shravu"], emoji:"🌷", photo:"",
+ tagline:"My adorable little sister.",
+ story:"Shrav, you are my sweet little sister. You and Pranali are my chhoti bahane, and I will always love you both with all my heart. No matter how much we grow up, you will always have that special little-sister place in my life.",
+ memory:"All our little talks, laughs and everyday moments that make sisterhood feel so precious.",
+ bond:"Chhoti behen by heart — loved, protected and cheered for, always.",
+ shayari:"Chhoti si muskaan teri, mere dil ka sukoon hai,\nTeri khushi se hi toh meri duniya khoobsurat hai.\nRishta khoon ka ho ya na ho, pyaar kabhi kam nahi hota,\nMeri chhoti behen, tera saath mere liye anmol hai.",
+ signoff:"Your badi sister ♡"
+},
+{
+ id:"uday", name:"Uday", nick:"Chomdaa · Gorilla 🦍",
+ aliases:["uday","chomdaa","chomda","gorilla"], emoji:"🦍", photo:"",
+ tagline:"My first male friend. My best best friend. My brother.",
+ story:"You were my first male friend, and we met in college in 2022. You have stood beside me through good times and bad. Whenever I won a prize in college, after calling my parents, you were the next person I wanted to call. You know my failures, successes, problems and so many little things about my life. You are not just a best friend — you are my brother by heart. And of course, Vai is a special part of this story too.",
+ memory:"The celebrations, the difficult days, the random calls and knowing that I have a brother-like friend who understands me.",
+ bond:"My chosen family. My first male friend. My best best friend. A brother I am grateful life gave me.",
+ shayari:"Khushi ki khabar ho ya aankhon mein nami,\nTujhse baat kiye bina lagti hai har khushi adhoori si.\nDuniya mein dost bahut milenge, par tujhsa bhai nahi,\nMeri har jeet ki khushi mein, tera zikr zaroori hai.",
+ signoff:"Teri dost, teri behen — forever ♡"
+},
+{
+ id:"sanjana", name:"Sanjana", nick:"My problem solver 🫶",
+ aliases:["sanjana"], emoji:"🫶", photo:"",
+ tagline:"Different branches, same hearts.",
+ story:"You were my first college best friend. We started in the same class during first year in 2022. From second year, you chose Electrical Engineering while I chose Electronics and Telecommunication Engineering. Our branches became different, but our hearts never did. We can call each other at any time, share every problem and try to find a solution together.",
+ memory:"The calls at any hour, the honest conversations and the way we help each other through life's problems.",
+ bond:"My problem solver, my trusted person and a friendship that keeps choosing each other.",
+ shayari:"Raaste alag hue, par dilon ke raaste nahi,\nBranches badal gayi, par apnepan ke vaaste nahi.\nMeri uljhanon ko suljhane wali meri dost,\nTere jaisa saath mile, toh mushkilein bhi mushkilein nahi.",
+ signoff:"Always here for you ♡"
+},
+{
+ id:"swarup", name:"Swarup", nick:"Jadya 🌙",
+ aliases:["swarup","jadya"], emoji:"🌙", photo:"",
+ tagline:"A meaningful chapter in my life.",
+ story:"You have played an important role in my life, and our friendship gave me memories that will always be part of my journey. I value the time, conversations and experiences we shared. I hope life brings you happiness, success and beautiful things. If you ever need me, I want you to know that I will be there for you.",
+ memory:"The conversations, experiences and moments that became part of my college story.",
+ bond:"A friend who has a meaningful place in my journey and my good wishes, always.",
+ shayari:"Kuch yaadein dil mein hamesha muskurati rahengi,\nKuch dosti ki baatein zindagi bhar yaad aayengi.\nWaqt chahe jitne bhi naye mod lekar aaye,\nTere liye meri duaayein hamesha saath jayengi.",
+ signoff:"Wishing you good things, always ♡"
+},
+{
+ id:"vaibhavi", name:"Vaibhavi", nick:"Vai 💕",
+ aliases:["vaibhavi","vai"], emoji:"💕", photo:"",
+ tagline:"A friendship that became unexpectedly close.",
+ story:"We met through Uday, and over the last year our friendship has grown into something genuinely sweet. You share your problems with me, and I try my best to help you find solutions. I love the trust and closeness we have built. Our bond has its own little magic — the kind that makes people a little jealous too!",
+ memory:"Our honest conversations, sharing our problems and being able to speak from the heart.",
+ bond:"A close and trusting friendship that became a lovely part of my life.",
+ shayari:"Anjaane se rishte kab apne ban jaate hain,\nKuch log milkar dil ke kareeb aa jaate hain.\nTeri har pareshani mein muskaan dhoondhne ki koshish rahegi,\nHamari pyaari si dosti hamesha dil ke paas rahegi.",
+ signoff:"Your friend, always ♡"
+},
+{
+ id:"shiv", name:"Shiv", nick:"My close college friend ✨",
+ aliases:["shiv"], emoji:"✨", photo:"",
+ tagline:"A good friend who shows up.",
+ story:"You are one of my close college friends. Every special relationship does not need the best-friend label to mean something. You have been there for me, and I genuinely value your friendship, support and the memories we share.",
+ memory:"Our college memories, conversations and the comfort of knowing I have a good friend I can count on.",
+ bond:"A genuine friendship that I am happy became part of my college chapter.",
+ shayari:"Har rishte ko naam dena zaroori toh nahi,\nHar apne ki kahaani lafzon mein bayaan hoti nahi.\nTera saath aur teri dosti mere liye khaas hai,\nCollege ki yaadon mein tera bhi ek khoobsurat ehsaas hai.",
+ signoff:"Keep being you ♡"
+}
+];
+
+function goTo(id) {
+ document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+function escapeHTML(value) {
+ return String(value).replace(/[&<>"']/g, ch => ({
+  "&":"&amp;", "<":"&lt;", ">":"&gt;",
+  '"':"&quot;", "'":"&#39;"
+ }[ch]));
+}
+
+function photoContent(friend) {
+ if (friend.photo && friend.photo.trim()) {
+  return `<img src="${escapeHTML(friend.photo)}" alt="${escapeHTML(friend.name)}">`;
+ }
+ return `<div class="emoji">${friend.emoji}</div>
+ <strong>${escapeHTML(friend.name)}'s photo ♡</strong>
+ <span>Add a favourite picture here</span>`;
+}
+
+function showFriend(friend) {
+ const profile = document.getElementById("profile");
+ profile.innerHTML = `
+ <div class="profile-head">
+  <div class="avatar"><div class="photo">${photoContent(friend)}</div></div>
+  <div>
+   <div class="nickname">${escapeHTML(friend.nick)}</div>
+   <h3>Dear ${escapeHTML(friend.name)} ♡</h3>
+   <p>${escapeHTML(friend.tagline)}</p>
+  </div>
+ </div>
+ <div class="profile-body">
+  <div class="shayari">
+   <h4>A little shayari for you 💌</h4>
+   <p>${escapeHTML(friend.shayari)}</p>
+   <span>♡ written with love ♡</span>
+  </div>
+  <div class="subhead">A letter just for you</div>
+  <p>${escapeHTML(friend.story)}</p>
+  <div class="subhead">Our favourite memories 📸</div>
+  <div class="memory">
+   <strong>Our little memory corner ♡</strong>
+   <p>${escapeHTML(friend.memory)}</p>
+   <p>Add your favourite picture using this person's photo field in the JavaScript code.</p>
+  </div>
+  <div class="subhead">What you mean to me</div>
+  <p>${escapeHTML(friend.bond)}</p>
+  <div class="profile-bottom">
+   <span class="signature">${escapeHTML(friend.signoff)}</span>
+   <button class="btn secondary" onclick="closeProfile()">Close my page ✿</button>
+  </div>
+ </div>`;
+ profile.style.display = "block";
+ document.getElementById("error").textContent = "";
+ profile.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function closeProfile() {
+ document.getElementById("profile").style.display = "none";
+ document.getElementById("friendName").value = "";
+ goTo("friend-login");
+}
+
+document.getElementById("nameForm").addEventListener("submit", event => {
+ event.preventDefault();
+ const typed = document.getElementById("friendName").value.trim().toLowerCase();
+ const friend = friends.find(f =>
+  f.aliases.some(alias => alias.toLowerCase() === typed) ||
+  f.name.toLowerCase() === typed
+ );
+ if (!typed) {
+  document.getElementById("error").textContent = "Type your name first, bestie ♡";
+  return;
+ }
+ if (friend) {
+  showFriend(friend);
+ } else {
+  document.getElementById("error").textContent =
+   "I couldn't find that name. Try your name or nickname 💗";
+  document.getElementById("profile").style.display = "none";
+ }
+});
+
+document.getElementById("friendsGrid").innerHTML = friends.map(friend => `
+ <article class="friend-card">
+  <div class="photo">${photoContent(friend)}</div>
+  <h3>${escapeHTML(friend.name)} ${friend.emoji}</h3>
+  <p>${escapeHTML(friend.tagline)}</p>
+  <button onclick="showFriend(friends.find(f => f.id === '${friend.id}'))">
+   Open ${escapeHTML(friend.name)}'s page ♡
+  </button>
+ </article>
+`).join("");
+</script>
+</body>
+</html>

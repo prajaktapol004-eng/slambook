@@ -1,0 +1,2991 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajakta Pol | Electronics & Industrial Automation Engineer</title>
+  <meta name="description" content="Portfolio of Prajakta Pol - Electronics and Telecommunication Engineer specializing in Industrial Automation, PLC Programming, and Control Systems." />
+  
+  <!-- Google Fonts: Playfair Display for elegant headings, Plus Jakarta Sans for clean body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME SYSTEM (Light & Dark)
+       Palette: Warm Ivory, Blush Pink, Lavender, Soft Sage Green, Deep Plum Text
+       ========================================================================== */
+    :root {
+      /* Base & Surfaces */
+      --bg-canvas: #FAF7F2;              /* Warm ivory base */
+      --bg-canvas-rgb: 250, 247, 242;
+      --bg-surface: #FFFFFF;             /* Crisp card surface */
+      --bg-surface-glass: rgba(255, 255, 255, 0.82);
+      --bg-subtle: #F4EFEA;              /* Secondary surface */
+      --bg-pill: #F6F1EA;
+
+      /* Brand Palette */
+      --color-plum: #2D1B2A;             /* Deep plum primary text */
+      --color-plum-light: #4A3346;       /* Plum secondary text */
+      --color-plum-muted: #7E6779;       /* Muted plum text */
+      --color-plum-rgb: 45, 27, 42;
+
+      --blush-light: #FCECEE;
+      --blush-base: #F5CBD0;
+      --blush-accent: #E28C96;
+      --blush-glow: rgba(226, 140, 150, 0.28);
+
+      --lavender-light: #F2EEF8;
+      --lavender-base: #DACFF0;
+      --lavender-accent: #8E78B8;
+      --lavender-glow: rgba(142, 120, 184, 0.25);
+
+      --sage-light: #EFF5F1;
+      --sage-base: #C8DDD0;
+      --sage-accent: #527A65;
+      --sage-glow: rgba(82, 122, 101, 0.22);
+
+      --gold-sparkle: #ECC369;
+
+      /* UI Accents */
+      --border-subtle: rgba(74, 51, 70, 0.1);
+      --border-medium: rgba(74, 51, 70, 0.18);
+      --border-accent: rgba(226, 140, 150, 0.35);
+
+      --shadow-sm: 0 4px 12px rgba(45, 27, 42, 0.04);
+      --shadow-card: 0 12px 32px -6px rgba(45, 27, 42, 0.06), 0 2px 6px rgba(45, 27, 42, 0.03);
+      --shadow-hover: 0 20px 40px -10px rgba(45, 27, 42, 0.12), 0 0 0 1px var(--blush-accent);
+
+      /* Typography */
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --transition-smooth: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] {
+      /* Dark Mode Palette: Velvet Midnight Plum, Luminous Blush, Lavender Glow */
+      --bg-canvas: #160E18;
+      --bg-canvas-rgb: 22, 14, 24;
+      --bg-surface: #221526;
+      --bg-surface-glass: rgba(34, 21, 38, 0.86);
+      --bg-subtle: #2B1C30;
+      --bg-pill: #34223A;
+
+      --color-plum: #FBF7F2;             /* Luminous ivory in dark */
+      --color-plum-light: #D9C8D6;       /* Warm silvery mauve */
+      --color-plum-muted: #9E889A;
+      --color-plum-rgb: 251, 247, 242;
+
+      --blush-light: #381E27;
+      --blush-base: #F597A4;
+      --blush-accent: #FFAEBA;
+      --blush-glow: rgba(255, 174, 186, 0.28);
+
+      --lavender-light: #2A1D3A;
+      --lavender-base: #BFAEE3;
+      --lavender-accent: #D2C4F5;
+      --lavender-glow: rgba(210, 196, 245, 0.22);
+
+      --sage-light: #1A2B23;
+      --sage-base: #8EBF9F;
+      --sage-accent: #AEE2C3;
+      --sage-glow: rgba(174, 226, 195, 0.2);
+
+      --gold-sparkle: #F6D888;
+
+      --border-subtle: rgba(251, 247, 242, 0.1);
+      --border-medium: rgba(251, 247, 242, 0.18);
+      --border-accent: rgba(245, 151, 164, 0.4);
+
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
+      --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.45);
+      --shadow-hover: 0 22px 48px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--blush-accent);
+    }
+
+    /* ==========================================================================
+       GLOBAL RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--color-plum);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Background Texture: Soft Circuit Watermark & Gentle Mesh Glows */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.55;
+      animation: floatOrb 18s ease-in-out infinite alternate;
+    }
+
+    .ambient-orb-1 {
+      top: -100px;
+      left: -80px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, var(--blush-base), transparent 70%);
+    }
+
+    .ambient-orb-2 {
+      top: 35%;
+      right: -120px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, var(--lavender-base), transparent 70%);
+      animation-delay: -6s;
+    }
+
+    .ambient-orb-3 {
+      bottom: 5%;
+      left: 10%;
+      width: 440px;
+      height: 440px;
+      background: radial-gradient(circle, var(--sage-base), transparent 70%);
+      animation-delay: -11s;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(30px, 40px) scale(1.08); }
+      100% { transform: translate(-25px, 20px) scale(0.96); }
+    }
+
+    /* Subtle circuit traces in background */
+    .circuit-grid-overlay {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 50% 50%, var(--border-subtle) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================================================
+       TYPOGRAPHY
+       ========================================================================== */
+    h1, h2, h3, h4, .font-serif {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      color: var(--color-plum);
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--color-plum-light);
+      font-size: 1.025rem;
+    }
+
+    /* Badge & Micro Pills */
+    .aesthetic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.38rem 0.95rem;
+      border-radius: 9999px;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-accent);
+      color: var(--color-plum);
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.25rem;
+    }
+
+    .badge-sparkle {
+      color: var(--gold-sparkle);
+      display: inline-block;
+      animation: sparkleRotate 3.5s ease-in-out infinite;
+    }
+
+    @keyframes sparkleRotate {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(20deg) scale(1.2); }
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blush-accent);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      margin-bottom: 0.85rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-plum-muted);
+    }
+
+    /* Circuit Trace Divider */
+    .circuit-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.25rem auto 0 auto;
+      max-width: 220px;
+    }
+
+    .circuit-divider .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    }
+
+    .circuit-divider .node {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blush-accent);
+      box-shadow: 0 0 8px var(--blush-accent);
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.82rem 1.65rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      border: 1px solid transparent;
+      outline: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blush-accent), #CE7580);
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px -4px var(--blush-glow);
+    }
+
+    [data-theme="dark"] .btn-primary {
+      background: linear-gradient(135deg, #E67A88, #C45F6D);
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px -4px rgba(230, 122, 136, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px -4px var(--blush-glow);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(10px);
+      color: var(--color-plum);
+      border-color: var(--border-medium);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface);
+      border-color: var(--blush-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1rem 0;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(var(--bg-canvas-rgb), 0.82);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: padding 0.3s ease, background 0.3s ease;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo: Cute Spark & Circuit Flower */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--color-plum);
+    }
+
+    .circuit-flower-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blush-light);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .nav-logo:hover .circuit-flower-icon {
+      transform: rotate(18deg) scale(1.08);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .logo-role {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-plum-muted);
+      font-weight: 500;
+    }
+
+    /* Desktop Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--color-plum-light);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blush-accent), var(--lavender-accent));
+      border-radius: 2px;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-plum);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Right Controls: Theme Toggle & Mobile Toggle */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Theme Toggle Pill */
+    .theme-toggle-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-medium);
+      color: var(--color-plum);
+      padding: 0.45rem 0.8rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--bg-surface);
+      border-color: var(--blush-accent);
+      transform: translateY(-1px);
+    }
+
+    .theme-icon-slot {
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.5rem;
+      color: var(--color-plum);
+      cursor: pointer;
+    }
+
+    /* Mobile Navigation Drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-card);
+      z-index: 99;
+      flex-direction: column;
+      gap: 1rem;
+      transform: translateY(-10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-link {
+      font-size: 1.1rem;
+      color: var(--color-plum);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding: 4.5rem 0 5rem 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-heading {
+      font-size: clamp(2.4rem, 4.8vw, 3.6rem);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    .hero-heading span.name-accent {
+      background: linear-gradient(135deg, var(--blush-accent) 0%, var(--lavender-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      color: var(--lavender-accent);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    [data-theme="dark"] .hero-subtitle {
+      color: var(--lavender-base);
+    }
+
+    .hero-bio {
+      font-size: 1.08rem;
+      color: var(--color-plum-light);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2.25rem;
+    }
+
+    /* Ladder Logic Micro Banner in Hero */
+    .hero-ladder-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.9rem;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--color-plum-muted);
+    }
+
+    .ladder-symbol {
+      color: var(--sage-accent);
+      font-weight: 700;
+    }
+
+    /* HERO VISUAL AREA (Photo + Mini PLC Illustration + Floating Cards) */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-composition-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    /* Photo Frame with Soft Architectural Curves & Blush Halo */
+    .photo-frame-outer {
+      position: relative;
+      width: 290px;
+      height: 360px;
+      margin: 0 auto;
+      border-radius: 140px 140px 36px 36px;
+      padding: 8px;
+      background: linear-gradient(145deg, var(--blush-base), var(--lavender-base), var(--sage-base));
+      box-shadow: 
+        0 24px 50px -12px var(--blush-glow),
+        0 0 0 1px var(--border-accent);
+      transition: transform 0.4s ease;
+    }
+
+    .photo-frame-outer:hover {
+      transform: translateY(-4px);
+    }
+
+    .photo-inner-canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 132px 132px 30px 30px;
+      overflow: hidden;
+      background: var(--bg-canvas);
+      position: relative;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .photo-frame-outer:hover .profile-photo {
+      transform: scale(1.04);
+    }
+
+    /* Decorative Circuit Flower Corner Charm */
+    .circuit-flower-charm {
+      position: absolute;
+      top: -12px;
+      right: 12px;
+      width: 52px;
+      height: 52px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-card);
+      z-index: 4;
+      animation: gentleFloat 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes gentleFloat {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(8deg); }
+    }
+
+    /* Floating Card 1: "Curious mind. Creative engineer." */
+    .floating-card-mind {
+      position: absolute;
+      bottom: -15px;
+      left: -20px;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-accent);
+      border-radius: 18px;
+      padding: 0.85rem 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: var(--shadow-card);
+      z-index: 5;
+      animation: floatBadge 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBadge {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .floating-card-mind .avatar-spark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--lavender-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--lavender-accent);
+      font-size: 1.1rem;
+    }
+
+    .floating-card-mind .mind-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      line-height: 1.2;
+    }
+
+    .floating-card-mind .mind-sub {
+      font-size: 0.74rem;
+      color: var(--color-plum-muted);
+    }
+
+    /* Interactive Mini PLC Controller Illustration Card (Side Badge) */
+    .mini-plc-card {
+      position: absolute;
+      top: 60px;
+      left: -35px;
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-medium);
+      border-radius: 16px;
+      padding: 0.75rem 0.95rem;
+      box-shadow: var(--shadow-card);
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      animation: floatBadge 7s ease-in-out infinite alternate-reverse;
+      width: 175px;
+    }
+
+    .plc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.35rem;
+    }
+
+    .plc-title {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--color-plum);
+    }
+
+    .plc-leds {
+      display: flex;
+      gap: 4px;
+    }
+
+    .plc-led {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .led-pwr { background: #4ADE80; box-shadow: 0 0 6px #4ADE80; }
+    .led-run { background: #38BDF8; box-shadow: 0 0 6px #38BDF8; animation: ledPulse 1.8s infinite; }
+    .led-err { background: #F87171; opacity: 0.3; }
+
+    @keyframes ledPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .plc-rung-preview {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      color: var(--sage-accent);
+      background: var(--bg-canvas);
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .plc-interactive-toggle {
+      font-size: 0.68rem;
+      font-family: var(--font-sans);
+      color: var(--blush-accent);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      padding: 0;
+    }
+
+    .plc-interactive-toggle:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== */
+    .about-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .about-card-hero {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-medium);
+      border-radius: 28px;
+      padding: 3rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blush-accent), var(--lavender-accent), var(--sage-accent));
+    }
+
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-lead-text {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: var(--color-plum);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-lead-text strong {
+      color: var(--blush-accent);
+      font-weight: 600;
+    }
+
+    .about-body-text {
+      color: var(--color-plum-light);
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+    }
+
+    /* Mini Metric / Quick Highlight Badge */
+    .about-metrics-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1.75rem;
+    }
+
+    .metric-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.1rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+
+    .metric-pill-val {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-plum);
+    }
+
+    .metric-pill-lbl {
+      font-size: 0.78rem;
+      color: var(--color-plum-muted);
+      line-height: 1.2;
+    }
+
+    /* Three Decorative Info Cards */
+    .about-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .info-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 22px;
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .info-card:hover .info-card-icon {
+      transform: scale(1.1) rotate(4deg);
+    }
+
+    .icon-education { background: var(--lavender-light); color: var(--lavender-accent); }
+    .icon-automation { background: var(--sage-light); color: var(--sage-accent); }
+    .icon-research { background: var(--blush-light); color: var(--blush-accent); }
+
+    .info-card-title {
+      font-size: 1.28rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card-desc {
+      font-size: 0.94rem;
+      color: var(--color-plum-light);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SKILLS SECTION
+       ========================================================================== */
+    .skills-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .skill-category-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 2.25rem 1.85rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-category-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    .category-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cat-title {
+      font-size: 1.22rem;
+      line-height: 1.25;
+    }
+
+    .cat-desc {
+      font-size: 0.78rem;
+      color: var(--color-plum-muted);
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--color-plum);
+      transition: all 0.22s ease;
+    }
+
+    .skill-pill:hover {
+      background: var(--bg-surface);
+      border-color: var(--blush-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .cat-automation .skill-bullet { background: var(--sage-accent); }
+    .cat-hardware .skill-bullet { background: var(--blush-accent); }
+    .cat-electronics .skill-bullet { background: var(--lavender-accent); }
+
+    /* ==========================================================================
+       FEATURED PROJECTS SECTION (Text-First, Zero Placeholders)
+       ========================================================================== */
+    .projects-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 26px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .project-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-icon-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border-subtle);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-icon-badge {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .project-category-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.32rem 0.75rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .tag-team { background: var(--sage-light); color: var(--sage-accent); border: 1px solid rgba(82, 122, 101, 0.2); }
+    .tag-iot { background: var(--blush-light); color: var(--blush-accent); border: 1px solid rgba(226, 140, 150, 0.2); }
+    .tag-comm { background: var(--lavender-light); color: var(--lavender-accent); border: 1px solid rgba(142, 120, 184, 0.2); }
+    .tag-practice { background: var(--bg-pill); color: var(--color-plum-muted); border: 1px solid var(--border-subtle); }
+
+    .project-title {
+      font-size: 1.45rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .project-description {
+      font-size: 0.96rem;
+      color: var(--color-plum-light);
+      line-height: 1.68;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* Key Spec / Highlight list within project */
+    .project-spec-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-spec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--color-plum-light);
+    }
+
+    .spec-icon {
+      color: var(--blush-accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Practice Note Banner for Project 4 */
+    .practice-callout {
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--lavender-accent);
+      border-radius: 0 10px 10px 0;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--color-plum-muted);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .project-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      color: var(--color-plum);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* ==========================================================================
+       EXPERIENCE & ACHIEVEMENTS SECTION (Vertical Timeline)
+       ========================================================================== */
+    .experience-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+
+    /* Central vertical trace */
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 28px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--blush-accent), var(--lavender-accent), var(--sage-accent));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.75rem;
+      padding-left: 72px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline Node (Circuit Pad Motif) */
+    .timeline-node {
+      position: absolute;
+      left: 15px;
+      top: 4px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 2px solid var(--blush-accent);
+      box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 12px var(--blush-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blush-accent);
+      font-size: 0.75rem;
+      z-index: 2;
+    }
+
+    .timeline-node.node-award {
+      border-color: var(--gold-sparkle);
+      color: var(--gold-sparkle);
+      box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 14px rgba(236, 195, 105, 0.4);
+    }
+
+    .timeline-node.node-drdo {
+      border-color: var(--lavender-accent);
+      color: var(--lavender-accent);
+      box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 12px var(--lavender-glow);
+    }
+
+    .timeline-content-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 1.75rem 2rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+    }
+
+    .timeline-content-card:hover {
+      transform: translateX(4px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .timeline-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-type-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .type-pgdia { background: var(--lavender-light); color: var(--lavender-accent); }
+    .type-internship { background: var(--sage-light); color: var(--sage-accent); }
+    .type-research { background: var(--blush-light); color: var(--blush-accent); }
+    .type-award { background: #FEF9E7; color: #B38600; }
+    [data-theme="dark"] .type-award { background: #383018; color: var(--gold-sparkle); }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+
+    .timeline-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--blush-accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.94rem;
+      color: var(--color-plum-light);
+      line-height: 1.62;
+    }
+
+    /* ==========================================================================
+       EDUCATION SECTION
+       ========================================================================== */
+    .education-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .edu-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .edu-card-top {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-icon-slot {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .edu-degree {
+      font-size: 1.3rem;
+      line-height: 1.25;
+    }
+
+    .edu-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .status-cgpa {
+      background: var(--sage-light);
+      color: var(--sage-accent);
+      border: 1px solid rgba(82, 122, 101, 0.25);
+    }
+
+    .status-completed {
+      background: var(--lavender-light);
+      color: var(--lavender-accent);
+      border: 1px solid rgba(142, 120, 184, 0.25);
+    }
+
+    .edu-desc {
+      font-size: 0.94rem;
+      color: var(--color-plum-light);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       CONTACT SECTION
+       ========================================================================== */
+    .contact-section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .contact-card-main {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-medium);
+      border-radius: 32px;
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-card);
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card-main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--blush-accent), var(--lavender-accent), transparent);
+    }
+
+    .contact-flower-art {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blush-light);
+      border-radius: 24px;
+      border: 1px solid var(--border-accent);
+      box-shadow: 0 10px 24px -6px var(--blush-glow);
+    }
+
+    .contact-heading {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .contact-invitation {
+      font-size: 1.08rem;
+      color: var(--color-plum-light);
+      max-width: 620px;
+      margin: 0 auto 2.5rem auto;
+      line-height: 1.7;
+    }
+
+    .contact-grid-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.65rem;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--border-medium);
+      background: var(--bg-surface);
+      color: var(--color-plum);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-action-btn:hover {
+      transform: translateY(-3px);
+      border-color: var(--blush-accent);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .contact-action-btn.btn-email-primary {
+      background: linear-gradient(135deg, var(--blush-accent), #D67A85);
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 10px 24px -6px var(--blush-glow);
+    }
+
+    .contact-action-btn.btn-email-primary:hover {
+      box-shadow: 0 16px 30px -6px var(--blush-glow);
+    }
+
+    .linkedin-placeholder-notice {
+      font-size: 0.82rem;
+      color: var(--color-plum-muted);
+      margin-top: 0.5rem;
+      font-family: var(--font-mono);
+    }
+
+    /* Copy toast notification */
+    .toast-notice {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--bg-surface);
+      color: var(--color-plum);
+      border: 1px solid var(--border-accent);
+      padding: 0.85rem 1.4rem;
+      border-radius: 9999px;
+      box-shadow: var(--shadow-card);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .toast-notice.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Resume Modal Dialog */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(var(--color-plum-rgb), 0.5);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: 24px;
+      padding: 2.25rem;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      text-align: center;
+      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      0% { transform: scale(0.92); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: var(--color-plum-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      padding: 3.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(var(--bg-canvas-rgb), 0.7);
+      backdrop-filter: blur(12px);
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .footer-sparkle-text {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--color-plum);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .back-to-top-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-plum-light);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .back-to-top-btn:hover {
+      color: var(--color-plum);
+      border-color: var(--blush-accent);
+      transform: translateY(-2px);
+    }
+
+    .copyright-text {
+      font-size: 0.82rem;
+      color: var(--color-plum-muted);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (Tablets & Mobile)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+      }
+
+      .hero-content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-bio {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .about-card-hero {
+        padding: 2rem 1.5rem;
+      }
+
+      .contact-card-main {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .photo-frame-outer {
+        width: 250px;
+        height: 320px;
+      }
+
+      .mini-plc-card {
+        top: 20px;
+        left: -15px;
+        transform: scale(0.9);
+      }
+
+      .floating-card-mind {
+        bottom: -20px;
+        left: -10px;
+        transform: scale(0.9);
+      }
+
+      .timeline-wrapper::before {
+        left: 20px;
+      }
+
+      .timeline-node {
+        left: 7px;
+      }
+
+      .timeline-item {
+        padding-left: 50px;
+      }
+
+      .timeline-content-card {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient background with soft glowing orbs and delicate micro grid -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="circuit-grid-overlay"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="header-nav" id="mainHeader">
+    <div class="container nav-container">
+      <!-- Logo: Circuit Flower + Name -->
+      <a href="#hero" class="nav-logo" aria-label="Prajakta Pol - Home">
+        <div class="circuit-flower-icon">
+          <!-- Cute SVG Circuit Flower Logo -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.2" fill="var(--blush-accent)" stroke="none"></circle>
+            <!-- Floral Circuit Petals with micro solder pads -->
+            <path d="M12 2C12 5.5 8.5 7 8.5 8.5C8.5 10 10.5 12 12 12C13.5 12 15.5 10 15.5 8.5C15.5 7 12 5.5 12 2Z" stroke="var(--lavender-accent)" fill="var(--lavender-light)" opacity="0.8"></path>
+            <path d="M22 12C18.5 12 17 8.5 15.5 8.5C14 8.5 12 10.5 12 12C12 13.5 14 15.5 15.5 15.5C17 15.5 18.5 12 22 12Z" stroke="var(--blush-accent)" fill="var(--blush-light)" opacity="0.8"></path>
+            <path d="M12 22C12 18.5 15.5 17 15.5 15.5C15.5 14 13.5 12 12 12C10.5 12 8.5 14 8.5 15.5C8.5 17 12 18.5 12 22Z" stroke="var(--sage-accent)" fill="var(--sage-light)" opacity="0.8"></path>
+            <path d="M2 12C5.5 12 7 15.5 8.5 15.5C10 15.5 12 13.5 12 12C12 10.5 10 8.5 8.5 8.5C7 8.5 5.5 12 2 12Z" stroke="var(--lavender-accent)" fill="var(--lavender-light)" opacity="0.8"></path>
+            <circle cx="12" cy="2" r="1.2" fill="var(--gold-sparkle)"></circle>
+            <circle cx="22" cy="12" r="1.2" fill="var(--gold-sparkle)"></circle>
+            <circle cx="12" cy="22" r="1.2" fill="var(--gold-sparkle)"></circle>
+            <circle cx="2" cy="12" r="1.2" fill="var(--gold-sparkle)"></circle>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-name">Prajakta Pol</span>
+          <span class="logo-role">Electronics &amp; Automation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <span class="theme-icon-slot" id="themeIconSlot">
+            <!-- Sun Icon (default for light mode) -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span id="themeToggleLabel" style="font-size: 0.8rem;">Light</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#about" class="mobile-nav-link">About <span>→</span></a>
+      <a href="#skills" class="mobile-nav-link">Skills <span>→</span></a>
+      <a href="#projects" class="mobile-nav-link">Projects <span>→</span></a>
+      <a href="#experience" class="mobile-nav-link">Experience &amp; Achievements <span>→</span></a>
+      <a href="#education" class="mobile-nav-link">Education <span>→</span></a>
+      <a href="#contact" class="mobile-nav-link">Contact <span>→</span></a>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Text & Pitch -->
+        <div class="hero-content">
+          <!-- Small Badge -->
+          <div class="aesthetic-badge">
+            <span class="badge-sparkle">✨</span>
+            <span>Electronics Engineer | Automation Enthusiast</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="hero-heading">
+            Hello, I'm <span class="name-accent">Prajakta!</span>
+          </h1>
+          
+          <!-- Second Line -->
+          <div class="hero-subtitle">
+            "I turn logic into intelligent automation."
+          </div>
+
+          <!-- Short Introduction -->
+          <p class="hero-bio">
+            Passionate about PLC programming, industrial automation, electronics, and control systems. 
+            I bridge sensory hardware and deterministic control logic to architect dependable, real-world automated solutions.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Connect</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 2L11 13"></path>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Micro PLC Ladder Rung Visual Banner -->
+          <div class="hero-ladder-badge">
+            <span class="ladder-symbol">| |</span>
+            <span>Input Sens: I0.0</span>
+            <span style="opacity: 0.35;">━━━</span>
+            <span class="ladder-symbol">( )</span>
+            <span>Coil: Q0.0 [ACTIVE]</span>
+            <span style="color: var(--gold-sparkle);">✦</span>
+          </div>
+        </div>
+
+        <!-- Right: Photo + Cute CSS/SVG PLC Illustration + Floating Cards -->
+        <div class="hero-visual">
+          <div class="photo-composition-wrap">
+            
+            <!-- Charming Corner Circuit Flower -->
+            <div class="circuit-flower-charm" title="Blossoming Engineering Logic">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" fill="var(--blush-accent)" stroke="none"></circle>
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="var(--blush-accent)"></path>
+                <circle cx="12" cy="3" r="1.5" fill="var(--gold-sparkle)"></circle>
+                <circle cx="21" cy="12" r="1.5" fill="var(--gold-sparkle)"></circle>
+                <circle cx="12" cy="21" r="1.5" fill="var(--gold-sparkle)"></circle>
+                <circle cx="3" cy="12" r="1.5" fill="var(--gold-sparkle)"></circle>
+                <path d="M6 6l2 2M16 16l2 2M6 18l2-2M16 6l2 2" stroke="var(--lavender-accent)" stroke-dasharray="1 2"></path>
+              </svg>
+            </div>
+
+            <!-- Main Photo Frame -->
+            <div class="photo-frame-outer">
+              <div class="photo-inner-canvas">
+                <img 
+                  src="./prajakta-photo.jpg" 
+                  alt="Prajakta Pol - Electronics & Automation Engineer" 
+                  class="profile-photo"
+                  onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'380\' viewBox=\'0 0 300 380\'><rect width=\'300\' height=\'380\' fill=\'%23F5CBD0\'/><circle cx=\'150\' cy=\'140\' r=\'65\' fill=\'%23DACFF0\'/><rect x=\'70\' y=\'225\' width=\'160\' height=\'155\' rx=\'40\' fill=\'%232D1B2A\'/><text x=\'150\' y=\'148\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'18\' fill=\'%232D1B2A\' font-weight=\'bold\'>Prajakta Pol</text></svg>';"
+                />
+              </div>
+            </div>
+
+            <!-- Mini Interactive PLC Card -->
+            <div class="mini-plc-card" id="miniPlcWidget">
+              <div class="plc-header">
+                <span class="plc-title">PLC-S7 // RACK 0</span>
+                <div class="plc-leds">
+                  <span class="plc-led led-pwr" title="Power OK"></span>
+                  <span class="plc-led led-run" id="plcRunLed" title="Running"></span>
+                  <span class="plc-led led-err" title="No Faults"></span>
+                </div>
+              </div>
+              <div class="plc-rung-preview">
+                <span id="rungContact">--[ I0.1 ]--</span>
+                <span style="opacity: 0.5;">─→</span>
+                <span id="rungCoil">( Q0.1 )</span>
+              </div>
+              <button class="plc-interactive-toggle" id="plcLadderToggleBtn" type="button">
+                <span>⚡ Click to Toggle Input</span>
+              </button>
+            </div>
+
+            <!-- Floating Card: "Curious mind. Creative engineer." -->
+            <div class="floating-card-mind">
+              <div class="avatar-spark">✦</div>
+              <div>
+                <div class="mind-title">Curious mind.</div>
+                <div class="mind-sub">Creative engineer. ✨</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== */
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span>//</span>
+          <span>Background &amp; Philosophy</span>
+        </div>
+        <h2 class="section-title">About Me</h2>
+        <div class="circuit-divider">
+          <span class="line"></span>
+          <span class="node"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <!-- Main About Hero Card -->
+      <div class="about-card-hero">
+        <div class="about-intro-grid">
+          <div>
+            <p class="about-lead-text">
+              I am an <strong>Electronics and Telecommunication Engineering graduate</strong> with an 
+              <strong>8.25 CGPA</strong> and a completed 
+              <strong>Post Graduate Diploma in Industrial Automation (PGDIA)</strong>.
+            </p>
+            <p class="about-body-text">
+              My passion lies in bridging the theoretical beauty of electronics with the tactile reliability of industrial automation. 
+              I find immense joy in unraveling complex control challenges—whether it is designing failsafe PLC ladder sequences, 
+              interfacing diverse industrial sensor arrays, or diagnosing subtle electrical anomalies in control panels.
+            </p>
+            <p class="about-body-text">
+              From academic research and national hackathons to collaborative project exposure with defense and space-aligned research environments, 
+              I believe in building automation solutions that are practical, safe, and engineered with precision.
+            </p>
+
+            <!-- Quick Highlight Metrics -->
+            <div class="about-metrics-strip">
+              <div class="metric-pill">
+                <span class="metric-pill-val">8.25</span>
+                <span class="metric-pill-lbl">B.Tech<br />CGPA</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-pill-val">PGDIA</span>
+                <span class="metric-pill-lbl">Industrial Automation<br />Completed</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-pill-val">3+</span>
+                <span class="metric-pill-lbl">PLC Platforms<br />Practiced</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative Engineering Vignette -->
+          <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 20px; padding: 1.75rem; text-align: center;">
+            <!-- Cute SVG Circuit Diagram Motif -->
+            <svg width="120" height="120" viewBox="0 0 100 100" fill="none" style="margin: 0 auto 1rem auto; display: block;">
+              <circle cx="50" cy="50" r="42" stroke="var(--border-accent)" stroke-width="1.5" stroke-dasharray="3 3"></circle>
+              <rect x="35" y="35" width="30" height="30" rx="8" fill="var(--bg-surface)" stroke="var(--blush-accent)" stroke-width="2"></rect>
+              <circle cx="50" cy="50" r="4" fill="var(--blush-accent)"></circle>
+              <!-- Circuit Nodes -->
+              <line x1="50" y1="15" x2="50" y2="35" stroke="var(--lavender-accent)" stroke-width="1.8"></line>
+              <circle cx="50" cy="15" r="3" fill="var(--gold-sparkle)"></circle>
+              <line x1="50" y1="65" x2="50" y2="85" stroke="var(--sage-accent)" stroke-width="1.8"></line>
+              <circle cx="50" cy="85" r="3" fill="var(--sage-accent)"></circle>
+              <line x1="15" y1="50" x2="35" y2="50" stroke="var(--blush-accent)" stroke-width="1.8"></line>
+              <circle cx="15" cy="50" r="3" fill="var(--blush-accent)"></circle>
+              <line x1="65" y1="50" x2="85" y2="50" stroke="var(--lavender-accent)" stroke-width="1.8"></line>
+              <circle cx="85" cy="50" r="3" fill="var(--lavender-accent)"></circle>
+            </svg>
+            <div style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--color-plum); margin-bottom: 0.35rem;">
+              "Soft Aesthetic meets Smart Engineering"
+            </div>
+            <div style="font-size: 0.82rem; color: var(--color-plum-muted);">
+              Where analytical logic and creative problem-solving converge.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three Small Decorative Information Cards -->
+      <div class="about-cards-grid">
+        <!-- Card 1: Education & Learning -->
+        <div class="info-card">
+          <div class="info-card-icon icon-education">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <h3 class="info-card-title">Education &amp; Learning</h3>
+          <p class="info-card-desc">
+            A solid grounding in Electronics and Telecommunication Engineering paired with an intensive, hands-on Post Graduate Diploma in Industrial Automation. Focused on continuous technical growth and structured fundamentals.
+          </p>
+        </div>
+
+        <!-- Card 2: Industrial Automation -->
+        <div class="info-card">
+          <div class="info-card-icon icon-automation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 class="info-card-title">Industrial Automation</h3>
+          <p class="info-card-desc">
+            Hands-on curiosity for PLC ladder programming, industrial sensors, transmitters, and control cabinets. Driven to translate process requirements into safe, reliable, and energy-efficient automation sequences.
+          </p>
+        </div>
+
+        <!-- Card 3: Innovation & Research -->
+        <div class="info-card">
+          <div class="info-card-icon icon-research">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="info-card-title">Innovation &amp; Research</h3>
+          <p class="info-card-desc">
+            Experience presenting award-winning research papers, ideating collaborative engineering concepts, and engaging in multi-disciplinary projects that solve pressing real-world technical problems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span>//</span>
+          <span>Core Capabilities</span>
+        </div>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+          Hands-on proficiencies cultivated through academic rigor, PGDIA diploma coursework, and laboratory practice.
+        </p>
+        <div class="circuit-divider">
+          <span class="line"></span>
+          <span class="node"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Industrial Automation -->
+        <div class="skill-category-card cat-automation">
+          <div class="category-header">
+            <div class="category-icon-box" style="background: var(--sage-light); color: var(--sage-accent);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <line x1="9" y1="9" x2="9" y2="15"></line>
+                <line x1="15" y1="9" x2="15" y2="15"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+              </svg>
+            </div>
+            <div>
+              <h3 class="cat-title">Industrial Automation</h3>
+              <span class="cat-desc">Controllers, logic &amp; supervisory systems</span>
+            </div>
+          </div>
+          <div class="pill-cloud">
+            <span class="skill-pill"><span class="skill-bullet"></span>PLC Fundamentals &amp; Ladder Logic</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Siemens PLC</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Allen-Bradley PLC</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Delta PLC</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>HMI Fundamentals</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>SCADA Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Industrial Hardware -->
+        <div class="skill-category-card cat-hardware">
+          <div class="category-header">
+            <div class="category-icon-box" style="background: var(--blush-light); color: var(--blush-accent);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="cat-title">Industrial Hardware</h3>
+              <span class="cat-desc">Panel devices, power &amp; instrumentation</span>
+            </div>
+          </div>
+          <div class="pill-cloud">
+            <span class="skill-pill"><span class="skill-bullet"></span>Sensors &amp; Transmitters</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Relays &amp; Contactors</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>SMPS, MCB &amp; Overload Relays</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>PNP / NPN Sensors</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Industrial Communication Fundamentals</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Control Panel Components</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Electronics & Programming -->
+        <div class="skill-category-card cat-electronics">
+          <div class="category-header">
+            <div class="category-icon-box" style="background: var(--lavender-light); color: var(--lavender-accent);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <div>
+              <h3 class="cat-title">Electronics &amp; Programming</h3>
+              <span class="cat-desc">Microcontrollers, IoT &amp; firmware</span>
+            </div>
+          </div>
+          <div class="pill-cloud">
+            <span class="skill-pill"><span class="skill-bullet"></span>ESP32</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Embedded Systems</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>Basic C Programming</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>IoT &amp; Sensor Integration</span>
+            <span class="skill-pill"><span class="skill-bullet"></span>PCB Fundamentals</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS SECTION (Text-First, Zero Placeholders)
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span>//</span>
+          <span>Technical Portfolio</span>
+        </div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Applied engineering endeavors spanning real-time IoT monitoring, embedded encryption, power sensing, and PLC automation.
+        </p>
+        <div class="circuit-divider">
+          <span class="line"></span>
+          <span class="node"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Water Quality Monitoring System -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon-badge" style="background: var(--sage-light); color: var(--sage-accent);">
+              <!-- Water droplet + sensor probe SVG -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                <path d="M12 12v5"></path>
+                <circle cx="12" cy="18" r="1"></circle>
+              </svg>
+            </div>
+            <span class="project-category-tag tag-team">IoT &amp; Sensing • Team Project</span>
+          </div>
+
+          <h3 class="project-title">Water Quality Monitoring System</h3>
+          <p class="project-description">
+            An ESP32-based multi-sensor environmental telemetry system designed to measure and evaluate vital water purity indices in real time. 
+            Integrated an analog sensor suite with custom PCB signal conditioning, relaying continuous data to the cloud for automated reporting.
+          </p>
+
+          <ul class="project-spec-list">
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Sensor Array:</strong> Calibrated TDS, pH, turbidity, and high-precision temperature probes.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Hardware &amp; Cloud:</strong> Custom PCB integration paired with automated IoT data logging via ThingSpeak.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Role:</strong> Collaborative team effort focusing on hardware prototyping, calibration, and sensory telemetry.</span>
+            </li>
+          </ul>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">TDS Sensor</span>
+            <span class="tech-tag">pH Sensor</span>
+            <span class="tech-tag">Turbidity</span>
+            <span class="tech-tag">Temperature</span>
+            <span class="tech-tag">PCB Integration</span>
+            <span class="tech-tag">ThingSpeak IoT</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Smart Energy Meter -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon-badge" style="background: var(--blush-light); color: var(--blush-accent);">
+              <!-- Power bolt + gauge SVG -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <span class="project-category-tag tag-iot">Power &amp; Embedded</span>
+          </div>
+
+          <h3 class="project-title">Smart Energy Meter</h3>
+          <p class="project-description">
+            A compact electrical energy monitoring concept designed to provide accessible electrical telemetry without cumbersome display panels. 
+            Leverages precision voltage transformation and Wi-Fi capability to push automated consumption notifications directly to mobile interfaces.
+          </p>
+
+          <ul class="project-spec-list">
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Precision Sensing:</strong> Utilizes the ZMPT101B active AC voltage transformer module for analog signal acquisition.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Instant Alerting:</strong> Direct Telegram Bot API integration delivering proactive threshold alarms and periodic reports.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Connectivity:</strong> Wi-Fi enabled telemetry engineered on the ESP32 microcontroller platform.</span>
+            </li>
+          </ul>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">ZMPT101B Sensor</span>
+            <span class="tech-tag">AC Voltage Monitoring</span>
+            <span class="tech-tag">Telegram Bot API</span>
+            <span class="tech-tag">Wi-Fi IoT</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Smart Encrypted Walkie-Talkie -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon-badge" style="background: var(--lavender-light); color: var(--lavender-accent);">
+              <!-- Radio / Shield lock SVG -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <span class="project-category-tag tag-comm">Wireless &amp; Security</span>
+          </div>
+
+          <h3 class="project-title">Smart Encrypted Walkie-Talkie</h3>
+          <p class="project-description">
+            A decentralized, direct RF point-to-point voice communication device built for environments lacking cellular or internet infrastructure. 
+            Employs low-latency wireless protocol and cryptographic ciphering to safeguard real-time audio transmission.
+          </p>
+
+          <ul class="project-spec-list">
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>RF Protocol:</strong> Built on ESP-NOW peer-to-peer wireless packet transmission for ultra-low latency.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Cryptographic Security:</strong> AES encryption applied to digitized voice payloads before RF broadcast.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Audio Interfacing:</strong> I2S digital microphone module and voice-activation (VOX) logic for hands-free control.</span>
+            </li>
+          </ul>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">ESP-NOW Protocol</span>
+            <span class="tech-tag">AES Encryption</span>
+            <span class="tech-tag">I2S Microphone</span>
+            <span class="tech-tag">Voice Activation (VOX)</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Industrial Automation Practice -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon-badge" style="background: var(--bg-subtle); color: var(--sage-accent);">
+              <!-- PLC Controller / Ladder logic symbol SVG -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M7 8h10M7 12h10M7 16h10"></path>
+              </svg>
+            </div>
+            <span class="project-category-tag tag-practice">Hands-on Practice &amp; Lab</span>
+          </div>
+
+          <h3 class="project-title">Industrial Automation Practice</h3>
+          
+          <div class="practice-callout">
+            <span style="color: var(--lavender-accent); font-weight: bold;">ⓘ</span>
+            <span>Dedicated laboratory exercises and simulated test-bench sequences (hands-on learning).</span>
+          </div>
+
+          <p class="project-description">
+            Structured hands-on laboratory exercises focused on mastering PLC programming fundamentals and industrial hardware integration across multiple controller architectures.
+          </p>
+
+          <ul class="project-spec-list">
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Multi-Platform Logic:</strong> Ladder logic authoring, testing, and troubleshooting across Siemens, Allen-Bradley, and Delta PLCs.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Sensor Interfacing:</strong> Wiring and verifying inductive, capacitive, and optical PNP/NPN sensors with controller input cards.</span>
+            </li>
+            <li class="project-spec-item">
+              <span class="spec-icon">✦</span>
+              <span><strong>Cabinet Components:</strong> Practical handling of relays, contactors, SMPS power supplies, and thermal overload protections.</span>
+            </li>
+          </ul>
+
+          <div class="project-tech-tags">
+            <span class="tech-tag">Ladder Logic</span>
+            <span class="tech-tag">Siemens PLC</span>
+            <span class="tech-tag">Allen-Bradley PLC</span>
+            <span class="tech-tag">Delta PLC</span>
+            <span class="tech-tag">Industrial Sensors</span>
+            <span class="tech-tag">Control Components</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPERIENCE & ACHIEVEMENTS SECTION (Vertical Timeline)
+       ========================================================================== -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span>//</span>
+          <span>Journey &amp; Milestones</span>
+        </div>
+        <h2 class="section-title">Experience &amp; Achievements</h2>
+        <p class="section-subtitle">
+          Professional training, research internships, institutional collaborations, and recognized conference honors.
+        </p>
+        <div class="circuit-divider">
+          <span class="line"></span>
+          <span class="node"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="timeline-wrapper">
+        
+        <!-- Timeline Item 1: PGDIA Training -->
+        <div class="timeline-item">
+          <div class="timeline-node">✦</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-pgdia">Diploma Training</span>
+              <span style="font-size: 0.8rem; color: var(--color-plum-muted);">Completed</span>
+            </div>
+            <h3 class="timeline-title">Industrial Automation Training &amp; Completed PGDIA</h3>
+            <div class="timeline-org">
+              <span>Post Graduate Diploma in Industrial Automation</span>
+            </div>
+            <p class="timeline-desc">
+              Completed comprehensive specialized training covering industrial automation architectures, ladder logic design, multi-brand PLC programming (Siemens, Allen-Bradley, Delta), SCADA/HMI basics, and industrial control panel design.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Laxmi Controls Internship -->
+        <div class="timeline-item">
+          <div class="timeline-node">⚙</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-internship">Industrial Internship</span>
+              <span style="font-size: 0.8rem; color: var(--color-plum-muted);">Solapur, Maharashtra</span>
+            </div>
+            <h3 class="timeline-title">Internship at Laxmi Controls</h3>
+            <div class="timeline-org">
+              <span>Laxmi Controls, Solapur</span>
+            </div>
+            <p class="timeline-desc">
+              Gained practical exposure to industrial control panels, switchgear wiring, circuit protection components, sensor testing, and troubleshooting industrial automation assemblies in a production environment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: DRDO Internship -->
+        <div class="timeline-item">
+          <div class="timeline-node node-drdo">🔬</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-research">Defense Research Internship</span>
+              <span style="font-size: 0.8rem; color: var(--color-plum-muted);">Research Environment</span>
+            </div>
+            <h3 class="timeline-title">DRDO Internship Experience</h3>
+            <div class="timeline-org">
+              <span>Defence Research and Development Organisation (DRDO)</span>
+            </div>
+            <p class="timeline-desc">
+              Participated in a structured research internship within a premier national defense laboratory. Observed high-reliability electronic test procedures, precision instrumentation, and rigorous engineering documentation practices.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: ISRO-Related Research Collaboration with DRDO -->
+        <div class="timeline-item">
+          <div class="timeline-node node-drdo">🛰</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-research">Research Collaboration</span>
+              <span style="font-size: 0.8rem; color: var(--color-plum-muted);">Collaborative Study</span>
+            </div>
+            <h3 class="timeline-title">Research Collaboration on ISRO-Related Project</h3>
+            <div class="timeline-org">
+              <span>Collaborative Project with DRDO &amp; ISRO Association</span>
+            </div>
+            <p class="timeline-desc">
+              Engaged in collaborative technical tasks associated with an ISRO-related research initiative coordinated with DRDO. Gained invaluable insights into mission-critical hardware considerations, thermal and electrical constraints, and analytical validation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5: Best Research Paper at NCRTC 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-node node-award">★</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-award">Research Honor</span>
+              <span style="font-size: 0.8rem; color: var(--gold-sparkle); font-weight: 600;">2025</span>
+            </div>
+            <h3 class="timeline-title">Best Research Paper Award</h3>
+            <div class="timeline-org">
+              <span>NCRTC 2025 (National Conference on Recent Trends in Computing)</span>
+            </div>
+            <p class="timeline-desc">
+              Authored and presented a technical research paper that was adjudicated and awarded the Best Research Paper accolade for its rigorous methodology, technical depth, and practical contribution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 6: First Rank at Ideathon Spirit 2k25 -->
+        <div class="timeline-item">
+          <div class="timeline-node node-award">🏆</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-award">Competition Honor</span>
+              <span style="font-size: 0.8rem; color: var(--gold-sparkle); font-weight: 600;">Spirit 2k25</span>
+            </div>
+            <h3 class="timeline-title">First Rank — Ideathon Spirit 2k25</h3>
+            <div class="timeline-org">
+              <span>SVERI • Jointly with Swarup</span>
+            </div>
+            <p class="timeline-desc">
+              Clinched the First Rank alongside teammate Swarup at the Spirit 2k25 Ideathon hosted by SVERI, presenting an innovative engineering concept evaluated on feasibility, technical originality, and system architecture.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 7: Best Oral Presentation -->
+        <div class="timeline-item">
+          <div class="timeline-node node-award">✨</div>
+          <div class="timeline-content-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-type-pill type-award">International Conference Honor</span>
+              <span style="font-size: 0.8rem; color: var(--gold-sparkle); font-weight: 600;">International Event</span>
+            </div>
+            <h3 class="timeline-title">Best Oral Presentation Award</h3>
+            <div class="timeline-org">
+              <span>2nd International Conference on Silk Fibroin and Sericulture Resources</span>
+            </div>
+            <p class="timeline-desc">
+              Awarded Best Oral Presentation for delivering a clear, articulate, and scientifically sound technical exposition before an international audience of researchers and academics.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION SECTION
+       ========================================================================== -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span>//</span>
+          <span>Academic Foundation</span>
+        </div>
+        <h2 class="section-title">Education</h2>
+        <div class="circuit-divider">
+          <span class="line"></span>
+          <span class="node"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="education-grid">
+        
+        <!-- Card 1: B.Tech -->
+        <div class="edu-card">
+          <div class="edu-card-top">
+            <div class="edu-icon-slot" style="background: var(--sage-light); color: var(--sage-accent);">
+              <!-- Graduation Cap SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="edu-degree">B.Tech in Electronics &amp; Telecommunication</h3>
+              <span style="font-size: 0.85rem; color: var(--color-plum-muted);">Engineering Graduate</span>
+            </div>
+          </div>
+          
+          <div class="edu-status-badge status-cgpa">
+            <span>Academic Performance:</span>
+            <strong>8.25 CGPA</strong>
+          </div>
+
+          <p class="edu-desc">
+            Rigorous four-year engineering curriculum encompassing analog and digital electronics, microcontroller architectures, communication theory, signals &amp; systems, and embedded hardware development.
+          </p>
+        </div>
+
+        <!-- Card 2: PGDIA -->
+        <div class="edu-card">
+          <div class="edu-card-top">
+            <div class="edu-icon-slot" style="background: var(--lavender-light); color: var(--lavender-accent);">
+              <!-- Certificate / Cogwheel SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="edu-degree">Post Graduate Diploma in Industrial Automation</h3>
+              <span style="font-size: 0.85rem; color: var(--color-plum-muted);">PGDIA Specialization</span>
+            </div>
+          </div>
+
+          <div class="edu-status-badge status-completed">
+            <span>Status:</span>
+            <strong>Completed</strong>
+          </div>
+
+          <p class="edu-desc">
+            Specialized post-graduate immersion covering practical industrial PLC programming (Siemens, Allen-Bradley, Delta), SCADA and HMI interfacing, sensor-transmitter loops, and industrial panel engineering.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-main">
+        
+        <!-- Decorative Circuit Flower Icon -->
+        <div class="contact-flower-art">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--blush-accent)"></path>
+            <polyline points="22,6 12,13 2,6" stroke="var(--lavender-accent)"></polyline>
+          </svg>
+        </div>
+
+        <h2 class="contact-heading">Have an idea? Let's make it happen! ✨</h2>
+        
+        <p class="contact-invitation">
+          Whether you are an engineering recruiter looking for a dedicated automation engineer, 
+          an industry professional with an exciting automation initiative, or a fellow builder—I would love to connect with you.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="contact-grid-actions">
+          
+          <!-- Direct Email Action -->
+          <a href="mailto:polprajakta07@gmail.com" class="contact-action-btn btn-email-primary" title="Email Prajakta Pol directly">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>polprajakta07@gmail.com</span>
+          </a>
+
+          <!-- Quick Copy Email Button -->
+          <button class="contact-action-btn" id="copyEmailBtn" type="button" title="Copy email address to clipboard">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copyBtnText">Copy Email</span>
+          </button>
+
+          <!-- LinkedIn Profile (clearly marked placeholder) -->
+          <a href="https://www.linkedin.com/in/your-profile-here" target="_blank" rel="noopener noreferrer" class="contact-action-btn" id="linkedinBtn" title="Visit LinkedIn profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>LinkedIn Profile</span>
+          </a>
+
+          <!-- Download Resume Button (Gracefully handles existence of resume.pdf) -->
+          <button class="contact-action-btn" id="resumeDownloadBtn" type="button" title="Download Prajakta's Resume">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </button>
+
+        </div>
+
+        <div class="linkedin-placeholder-notice">
+          ℹ️ LinkedIn Link Placeholder: Replace <code>href="https://www.linkedin.com/in/your-profile-here"</code> in <code>index.html</code> with your custom URL.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RESUME INFO MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">📄✨</div>
+      <h3 id="modalHeading" style="font-size: 1.35rem; margin-bottom: 0.75rem;">Resume Download Notice</h3>
+      <p style="font-size: 0.94rem; color: var(--color-plum-light); line-height: 1.6; margin-bottom: 1.5rem;">
+        To activate direct one-click downloading, please place your finalized <strong>resume.pdf</strong> in the same project directory alongside this <code>index.html</code> file!
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center;">
+        <button class="btn btn-primary" id="modalDismissBtn" type="button">Understood!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Email Copy -->
+  <div class="toast-notice" id="copyToast" role="status" aria-live="polite">
+    <span style="color: var(--sage-accent);">✔</span>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-sparkle-text">
+        <span>Made with curiosity, creativity &amp; a little bit of sparkle</span>
+        <span style="color: var(--gold-sparkle);">✨</span>
+      </div>
+
+      <a href="#hero" class="back-to-top-btn" title="Back to top">
+        <span>Back to Top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+
+      <div class="copyright-text">
+        &copy; <span id="currentYear">2026</span> Prajakta Pol. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: THEME TOGGLE, SMOOTH NAVIGATION, PLC DEMO, INTERACTION
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // --- 1. Theme Toggle System (Light / Dark) with LocalStorage ---
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const themeIconSlot = document.getElementById('themeIconSlot');
+      const themeToggleLabel = document.getElementById('themeToggleLabel');
+
+      const sunSvg = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>`;
+
+      const moonSvg = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>`;
+
+      function setTheme(theme) {
+        htmlEl.setAttribute('data-theme', theme);
+        localStorage.setItem('prajakta_portfolio_theme', theme);
+
+        if (theme === 'dark') {
+          themeIconSlot.innerHTML = moonSvg;
+          themeToggleLabel.textContent = 'Dark';
+        } else {
+          themeIconSlot.innerHTML = sunSvg;
+          themeToggleLabel.textContent = 'Light';
+        }
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem('prajakta_portfolio_theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
+      }
+
+      themeToggleBtn.addEventListener('click', function () {
+        const currentTheme = htmlEl.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+      });
+
+      // --- 2. Mobile Drawer Navigation ---
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileLinks = mobileDrawer.querySelectorAll('.mobile-nav-link');
+
+      mobileMenuBtn.addEventListener('click', function () {
+        mobileDrawer.classList.toggle('open');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          mobileDrawer.classList.remove('open');
+        });
+      });
+
+      // --- 3. Interactive Mini PLC Demo in Hero ---
+      const plcLadderToggleBtn = document.getElementById('plcLadderToggleBtn');
+      const rungContact = document.getElementById('rungContact');
+      const rungCoil = document.getElementById('rungCoil');
+      const plcRunLed = document.getElementById('plcRunLed');
+      let isEnergized = false;
+
+      if (plcLadderToggleBtn && rungContact && rungCoil) {
+        plcLadderToggleBtn.addEventListener('click', function () {
+          isEnergized = !isEnergized;
+          if (isEnergized) {
+            rungContact.textContent = '--[ I0.1 ]*--';
+            rungContact.style.color = 'var(--blush-accent)';
+            rungContact.style.fontWeight = 'bold';
+            rungCoil.textContent = '(* Q0.1 *)';
+            rungCoil.style.color = '#4ADE80';
+            rungCoil.style.textShadow = '0 0 8px #4ADE80';
+            plcLadderToggleBtn.innerHTML = '<span>⚡ Energized! (Click to Reset)</span>';
+          } else {
+            rungContact.textContent = '--[ I0.1 ]--';
+            rungContact.style.color = 'var(--sage-accent)';
+            rungContact.style.fontWeight = 'normal';
+            rungCoil.textContent = '( Q0.1 )';
+            rungCoil.style.color = 'inherit';
+            rungCoil.style.textShadow = 'none';
+            plcLadderToggleBtn.innerHTML = '<span>⚡ Click to Toggle Input</span>';
+          }
+        });
+      }
+
+      // --- 4. Copy Email & Toast Notification ---
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      const copyBtnText = document.getElementById('copyBtnText');
+      const copyToast = document.getElementById('copyToast');
+      const emailAddress = 'polprajakta07@gmail.com';
+
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', function () {
+          navigator.clipboard.writeText(emailAddress).then(function () {
+            copyBtnText.textContent = 'Copied!';
+            copyToast.classList.add('show');
+            setTimeout(function () {
+              copyBtnText.textContent = 'Copy Email';
+              copyToast.classList.remove('show');
+            }, 3000);
+          }).catch(function () {
+            // Fallback for older browsers
+            window.location.href = 'mailto:' + emailAddress;
+          });
+        });
+      }
+
+      // --- 5. Resume Download Button Handler ---
+      const resumeDownloadBtn = document.getElementById('resumeDownloadBtn');
+      const resumeModal = document.getElementById('resumeModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modalDismissBtn = document.getElementById('modalDismissBtn');
+
+      if (resumeDownloadBtn) {
+        resumeDownloadBtn.addEventListener('click', function () {
+          // Attempt to probe or fetch resume.pdf
+          fetch('./resume.pdf', { method: 'HEAD' })
+            .then(function (response) {
+              if (response.ok) {
+                // If resume.pdf is found, download it directly
+                const link = document.createElement('a');
+                link.href = './resume.pdf';
+                link.download = 'Prajakta_Pol_Resume.pdf';
+                link.click();
+              } else {
+                resumeModal.classList.add('active');
+              }
+            })
+            .catch(function () {
+              resumeModal.classList.add('active');
+            });
+        });
+      }
+
+      function closeModal() {
+        if (resumeModal) resumeModal.classList.remove('active');
+      }
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (modalDismissBtn) modalDismissBtn.addEventListener('click', closeModal);
+      if (resumeModal) {
+        resumeModal.addEventListener('click', function (e) {
+          if (e.target === resumeModal) closeModal();
+        });
+      }
+
+      // Update current year dynamically
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // Active Navigation Link Highlighting on Scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links .nav-link');
+
+      window.addEventListener('scroll', function () {
+        let scrollY = window.pageYOffset;
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 120;
+          const sectionId = current.getAttribute('id');
+
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + sectionId) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

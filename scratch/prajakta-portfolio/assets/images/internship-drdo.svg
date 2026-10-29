@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="drdoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <pattern id="drdoGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.8" />
+    </pattern>
+  </defs>
+
+  <rect width="600" height="340" rx="12" fill="url(#drdoBg)" stroke="#1e293b" stroke-width="2" />
+  <rect width="600" height="340" rx="12" fill="url(#drdoGrid)" opacity="0.4" />
+
+  <!-- Badge -->
+  <rect x="25" y="20" width="280" height="26" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+  <text x="35" y="37" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="11" font-weight="700">DRDO INTERNSHIP &bull; INSTRUMENTATION</text>
+  <circle cx="290" cy="33" r="4" fill="#38bdf8"/>
+
+  <!-- Radiation Source Cell (Cobalt-60) -->
+  <g transform="translate(35, 65)">
+    <rect x="0" y="0" width="120" height="210" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="60" y="25" fill="#f59e0b" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" text-anchor="middle">Cobalt-60 Source</text>
+    <text x="60" y="40" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">Gamma Radiation Chamber</text>
+
+    <!-- Radiation Trefoil Symbol -->
+    <circle cx="60" cy="85" r="28" fill="#451a03" stroke="#f59e0b" stroke-width="1"/>
+    <circle cx="60" cy="85" r="7" fill="#f59e0b"/>
+    <path d="M 60 70 A 15 15 0 0 0 47 77 L 53 85 A 7 7 0 0 1 60 78 Z" fill="#f59e0b"/>
+    <path d="M 73 92 A 15 15 0 0 0 73 78 L 66 85 A 7 7 0 0 1 67 92 Z" fill="#f59e0b"/>
+    <path d="M 47 92 A 15 15 0 0 0 60 100 L 60 92 A 7 7 0 0 1 54 86 Z" fill="#f59e0b"/>
+
+    <!-- Shielding details -->
+    <rect x="15" y="130" width="90" height="30" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+    <text x="60" y="145" fill="#e2e8f0" font-family="monospace" font-size="8" text-anchor="middle">Lead Shielding</text>
+    <text x="60" y="155" fill="#94a3b8" font-family="monospace" font-size="7" text-anchor="middle">Exposure Setup</text>
+
+    <rect x="15" y="170" width="90" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="60" y="186" fill="#f59e0b" font-family="monospace" font-size="8" text-anchor="middle">60-Co High Energy</text>
+  </g>
+
+  <!-- Gamma Emission Rays -->
+  <path d="M 160 120 C 180 110, 190 130, 210 120" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+  <path d="M 160 150 C 180 140, 190 160, 210 150" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+  <path d="M 160 180 C 180 170, 190 190, 210 180" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+
+  <!-- Gamma Ray Spectrometer & Dosimeter -->
+  <g transform="translate(215, 65)">
+    <rect x="0" y="0" width="165" height="210" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="82" y="25" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" text-anchor="middle">Gamma Spectrometer</text>
+    <text x="82" y="40" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">&amp; Radiation Dosimeter</text>
+
+    <!-- Scintillation Crystal / Detector Block -->
+    <rect x="15" y="55" width="135" height="42" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+    <text x="25" y="73" fill="#cbd5e1" font-family="monospace" font-size="8">Detector: NaI(Tl)</text>
+    <text x="25" y="87" fill="#38bdf8" font-family="monospace" font-size="8">PMT Pulse Analysis</text>
+
+    <!-- Multi-Channel Analyzer (MCA) Spectrum Display -->
+    <rect x="15" y="105" width="135" height="55" rx="4" fill="#020617" stroke="#334155" stroke-width="1"/>
+    <!-- Energy Spectrum peaks (1.17 MeV and 1.33 MeV of Co-60) -->
+    <path d="M 22 148 L 45 148 L 55 135 L 65 148 L 85 148 L 95 118 L 105 148 L 115 122 L 125 148 L 142 148" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+    <text x="95" y="115" fill="#f59e0b" font-family="monospace" font-size="7">1.17</text>
+    <text x="115" y="119" fill="#f59e0b" font-family="monospace" font-size="7">1.33</text>
+    <text x="22" y="116" fill="#94a3b8" font-family="monospace" font-size="7">MCA Peaks (MeV)</text>
+
+    <!-- Dosimeter Probe -->
+    <rect x="15" y="168" width="135" height="30" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="82" y="186" fill="#34d399" font-family="monospace" font-size="8" text-anchor="middle">Dosimeter Dose Logging</text>
+  </g>
+
+  <!-- Interconnect / Cable -->
+  <path d="M 385 155 H 415" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+
+  <!-- Rad-Hardened Connectors & RF Components -->
+  <g transform="translate(420, 65)">
+    <rect x="0" y="0" width="145" height="210" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="72" y="25" fill="#22d3ee" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" text-anchor="middle">RF &amp; Rad-Hardened</text>
+    <text x="72" y="40" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">Specialized Interconnects</text>
+
+    <!-- SMA / N-Type RF Connector Visual -->
+    <g transform="translate(25, 55)">
+      <rect x="0" y="5" width="28" height="30" rx="2" fill="#475569" stroke="#94a3b8" stroke-width="1"/>
+      <rect x="28" y="12" width="24" height="16" fill="#cbd5e1"/>
+      <circle cx="60" cy="20" r="7" fill="#f59e0b" stroke="#94a3b8" stroke-width="1"/>
+      <line x1="57" y1="20" x2="63" y2="20" stroke="#0f172a" stroke-width="2"/>
+      <text x="47" y="52" fill="#94a3b8" font-family="monospace" font-size="8" text-anchor="middle">MIL-Spec RF</text>
+    </g>
+
+    <!-- Rad-Hardened Material Tag -->
+    <rect x="12" y="120" width="120" height="34" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+    <text x="72" y="134" fill="#e2e8f0" font-family="monospace" font-size="8" text-anchor="middle">Radiation Tolerance</text>
+    <text x="72" y="146" fill="#38bdf8" font-family="monospace" font-size="7" text-anchor="middle">High Dose Integrity</text>
+
+    <!-- Project exposure note -->
+    <rect x="12" y="165" width="120" height="33" rx="4" fill="#082f49" stroke="#0284c7" stroke-width="1"/>
+    <text x="72" y="179" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="8" font-weight="600" text-anchor="middle">Internship Exposure</text>
+    <text x="72" y="190" fill="#94a3b8" font-family="sans-serif" font-size="7" text-anchor="middle">Research Learning</text>
+  </g>
+
+  <!-- Technical Spec Footer -->
+  <text x="300" y="305" fill="#64748b" font-family="'Segoe UI', monospace" font-size="11" text-anchor="middle">
+    DRDO Laboratory &bull; Gamma Spectrometry &bull; Cobalt-60 Shielding &bull; Radiation-Hardened RF Interconnects
+  </text>
+</svg>

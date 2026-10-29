@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ldrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="650" height="280" rx="8" fill="url(#ldrBg)" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Power Rails (L1 and L2 / Neutral) -->
+  <line x1="40" y1="30" x2="40" y2="250" stroke="#0284c7" stroke-width="4" />
+  <line x1="610" y1="30" x2="610" y2="250" stroke="#0284c7" stroke-width="4" />
+  <text x="40" y="22" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">+24V (L1)</text>
+  <text x="610" y="22" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">0V (L2)</text>
+
+  <!-- Rung 0000 Label -->
+  <rect x="5" y="80" width="30" height="18" rx="2" fill="#1e293b"/>
+  <text x="20" y="93" fill="#94a3b8" font-family="monospace" font-size="9" text-anchor="middle">0000</text>
+
+  <!-- Rung Main Wire -->
+  <line x1="40" y1="90" x2="110" y2="90" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Contact 1: [NC] Stop Pushbutton (I0.1) -->
+  <g transform="translate(110, 90)">
+    <line x1="0" y1="0" x2="25" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <!-- NC Contact Bars -->
+    <line x1="25" y1="-18" x2="25" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="45" y1="-18" x2="45" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <!-- Diagonal Slash for NC -->
+    <line x1="20" y1="14" x2="50" y2="-14" stroke="#ef4444" stroke-width="2.5" />
+    <line x1="45" y1="0" x2="70" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <text x="35" y="-24" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">I0.1</text>
+    <text x="35" y="32" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">STOP_PB (NC)</text>
+  </g>
+
+  <!-- Contact 2: [NC] Thermal Overload Relay (I0.2) -->
+  <g transform="translate(180, 90)">
+    <line x1="0" y1="0" x2="25" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <line x1="25" y1="-18" x2="25" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="45" y1="-18" x2="45" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="20" y1="14" x2="50" y2="-14" stroke="#ef4444" stroke-width="2.5" />
+    <line x1="45" y1="0" x2="70" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <text x="35" y="-24" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">I0.2</text>
+    <text x="35" y="32" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">OLR_TRIP (NC)</text>
+  </g>
+
+  <!-- Parallel Branch: [NO] Start PB (I0.0) OR [NO] Motor Latch Contact (Q0.0) -->
+  <!-- Split Node at x = 250 -->
+  <circle cx="250" cy="90" r="3.5" fill="#38bdf8" />
+  
+  <!-- Top Branch: Start Pushbutton -->
+  <g transform="translate(250, 90)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <!-- NO Contact Bars -->
+    <line x1="30" y1="-18" x2="30" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="50" y1="-18" x2="50" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="50" y1="0" x2="80" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <text x="40" y="-24" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">I0.0</text>
+    <text x="40" y="-8" fill="#10b981" font-family="sans-serif" font-size="8" text-anchor="middle">START_PB</text>
+  </g>
+
+  <!-- Bottom Branch: Seal-in Latching Contact (Q0.0) -->
+  <path d="M 250 90 V 160 H 280" stroke="#38bdf8" stroke-width="2" fill="none" />
+  <g transform="translate(280, 160)">
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <line x1="20" y1="-18" x2="20" y2="18" stroke="#f8fafc" stroke-width="2.5" />
+    <text x="10" y="-24" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">Q0.0</text>
+    <text x="10" y="32" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">MTR_LATCH</text>
+  </g>
+  <path d="M 300 160 H 330 V 90" stroke="#38bdf8" stroke-width="2" fill="none" />
+  <circle cx="330" cy="90" r="3.5" fill="#38bdf8" />
+
+  <!-- Line to Coil -->
+  <line x1="330" y1="90" x2="490" y2="90" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Output Coil: Motor Contactor Q0.0 -->
+  <g transform="translate(490, 90)">
+    <!-- Coil Parentheses () -->
+    <path d="M 10 -20 C 0 -10, 0 10, 10 20" stroke="#f8fafc" stroke-width="2.5" fill="none" />
+    <path d="M 35 -20 C 45 -10, 45 10, 35 20" stroke="#f8fafc" stroke-width="2.5" fill="none" />
+    <line x1="0" y1="0" x2="5" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <line x1="40" y1="0" x2="120" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="22" cy="0" r="4" fill="#10b981" />
+    <text x="22" y="-24" fill="#10b981" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">( Q0.0 )</text>
+    <text x="22" y="32" fill="#f8fafc" font-family="sans-serif" font-size="9" text-anchor="middle">MOTOR_CONTACTOR</text>
+  </g>
+
+  <!-- Legend / IEC note -->
+  <rect x="40" y="215" width="570" height="38" rx="4" fill="#042f2e" fill-opacity="0.3" stroke="#10b981" stroke-width="1"/>
+  <text x="325" y="232" fill="#5eead4" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" text-anchor="middle">
+    IEC 61131-3 Standard Ladder Logic: DOL Motor Starter with Seal-In Latch &amp; Overload Interlock
+  </text>
+  <text x="325" y="244" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">
+    Training simulation circuit implemented in Siemens STEP 7 / TIA Portal &amp; Rockwell RSLogix 500
+  </text>
+</svg>

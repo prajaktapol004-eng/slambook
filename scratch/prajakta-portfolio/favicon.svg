@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2" />
+      <stop offset="100%" stop-color="#F5CBD0" />
+    </linearGradient>
+    <radialGradient id="flowerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F5CBD0" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded Aesthetic Tile -->
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#bgGrad)" stroke="#E28C96" stroke-width="2" />
+  
+  <!-- Subtle Circuit Traces in Lavender & Sage -->
+  <path d="M12 18 L24 18 L32 26" stroke="#DACFF0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M52 46 L40 46 L32 38" stroke="#C8DDD0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="12" cy="18" r="2.5" fill="#ECC369" />
+  <circle cx="52" cy="46" r="2.5" fill="#ECC369" />
+
+  <!-- Circuit Flower Petals (Blush & Lavender) -->
+  <g transform="translate(32, 32)">
+    <!-- North Petal -->
+    <path d="M0 -18 C-4 -12 -5 -5 0 0 C5 -5 4 -12 0 -18 Z" fill="#F5CBD0" stroke="#E28C96" stroke-width="1.5"/>
+    <circle cx="0" cy="-18" r="1.8" fill="#ECC369"/>
+
+    <!-- South Petal -->
+    <path d="M0 18 C-4 12 -5 5 0 0 C5 5 4 12 0 18 Z" fill="#C8DDD0" stroke="#527A65" stroke-width="1.5"/>
+    <circle cx="0" cy="18" r="1.8" fill="#ECC369"/>
+
+    <!-- East Petal -->
+    <path d="M18 0 C12 -4 5 -5 0 0 C5 5 12 4 18 0 Z" fill="#DACFF0" stroke="#8E78B8" stroke-width="1.5"/>
+    <circle cx="18" cy="0" r="1.8" fill="#ECC369"/>
+
+    <!-- West Petal -->
+    <path d="-18 0 C-12 -4 -5 -5 0 0 C-5 5 -12 4 -18 0 Z" fill="#FCECEE" stroke="#E28C96" stroke-width="1.5"/>
+    <circle cx="-18" cy="0" r="1.8" fill="#ECC369"/>
+
+    <!-- Flower Core / Micro SMD Pad -->
+    <circle cx="0" cy="0" r="4.5" fill="#2D1B2A" />
+    <circle cx="0" cy="0" r="2.5" fill="#ECC369" />
+  </g>
+
+  <!-- Sparkle Accent -->
+  <polygon points="46,12 47.5,16 51.5,17.5 47.5,19 46,23 44.5,19 40.5,17.5 44.5,16" fill="#ECC369" />
+</svg>
